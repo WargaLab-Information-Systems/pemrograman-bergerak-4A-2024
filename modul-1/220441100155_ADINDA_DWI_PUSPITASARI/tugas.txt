@@ -42,6 +42,9 @@ fun main() {
     
     
     val jumlahBarang = katalogPakaian.size
+   //katalogPakaian.size: Di sini, katalogPakaian adalah nama dari list yang berisi pakaian. 
+   .size adalah sebuah properti yang memberikan jumlah elemen dalam list tersebut. Jadi, 
+   katalogPakaian.size memberikan jumlah elemen (dalam hal ini, jumlah barang) dalam list katalogPakaian.
     if (jumlahBarang > 0) {
         println("Total pakaian dalam katalog: $jumlahBarang")
     } else {
