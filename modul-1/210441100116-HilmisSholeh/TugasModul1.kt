@@ -14,13 +14,10 @@ fun main() {
         Mobil("Hiace", 650000)
     )
 
-    // Variabel untuk menyimpan pilihan mobil
     var pilihanMobil: Mobil?
 
-    // Variabel untuk menyimpan lama sewa
     var lamaSewa: Int?
 
-    // Variabel untuk menyimpan total biaya
     var totalBiaya = 0
 
     // Menampilkan daftar mobil yang tersedia
