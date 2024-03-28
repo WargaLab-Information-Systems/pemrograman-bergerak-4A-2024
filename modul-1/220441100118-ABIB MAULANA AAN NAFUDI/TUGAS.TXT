@@ -1,0 +1,50 @@
+// Definition of Product class
+data class Product(val name: String, val price: Int)
+
+// Variables
+val products = listOf(
+    Product("Laptop", 15000000),
+    Product("Smartphone", 8000000),
+    Product("Headphones", 3000000),
+    Product("Mouse", 200000)
+)
+
+// Functions
+fun printProducts() {
+    println("Products:")
+    products.forEachIndexed { index, product ->
+        println("${index + 1}. ${product.name} - Rp${product.price}")
+    }
+}
+
+fun addToCart(productIndex: Int) {
+    if (productIndex in products.indices) {
+        println("Added ${products[productIndex].name} to cart.")
+    } else {
+        println("Invalid product index.")
+    }
+}
+
+fun main() {
+    while (true) {
+        println("\n1. Show products")
+        println("2. Add to cart")
+        println("3. Exit")
+        print("Enter your choice: ")
+        val choice = readLine()?.toIntOrNull()
+        when (choice) {
+            1 -> printProducts()
+            2 -> {
+                print("Enter product index: ")
+                val productIndex = readLine()?.toIntOrNull()
+                if (productIndex != null) {
+                    addToCart(productIndex)
+                } else {
+                    println("Invalid input.")
+                }
+            }
+            3 -> break
+            else -> println("Invalid choice.")
+        }
+    }
+}
