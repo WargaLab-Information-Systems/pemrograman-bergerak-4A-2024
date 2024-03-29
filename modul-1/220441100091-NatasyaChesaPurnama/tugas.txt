@@ -1,0 +1,105 @@
+class apotek {
+    val listobat = arrayListOf(
+        Pair("Paracetamol", 5000),
+        Pair("Oskadon", 10000),
+        Pair("Amoxicillin", 8000)
+    )
+
+    fun tambahdata(nama: String, harga: Int) {
+        if (listobat.size < 5) {
+            listobat += Pair(nama, harga)
+        } else {
+            println("Maaf, daftar obat sudah penuh.")
+        }
+    }
+
+    fun daftar_obat() {
+        println("\n>> DAFTAR OBAT <<")
+        listobat.forEachIndexed { index, data ->
+            if (data != null) {
+                println("${index + 1}. ${data.first} Rp.${data.second}")
+            }
+        }
+    }
+}
+
+class pembelian(val daftarObat: apotek) {
+    fun prosesTransaksi() {
+        println("\nPROGRAM KASIR APOTEK SEDERHANA")
+
+        daftarObat.daftar_obat()
+        println("Masukkan Pilihan Obat :")
+        var iobat = readLine()!!.toInt()
+
+        if (daftarObat.listobat.getOrNull(iobat - 1) == null) {
+            println("Pilihan obat tidak ada")
+            return
+        }
+
+        val obat = daftarObat.listobat[iobat - 1]!!
+
+        println("Masukkan jumlah obat:")
+        val jumlahObat = readLine()!!.toInt()
+
+        println("\n-------------------------------")
+        println("     >> Detail Pembelian <<")
+        println("Nama Obat: ${obat.first}")
+        println("Harga Obat: ${obat.second}")
+        println("Jumlah Obat: $jumlahObat")
+        println("-------------------------------")
+
+        val totalHarga = obat.second * jumlahObat
+        println("Total Harga: Rp.$totalHarga")
+
+        println("Masukkan nominal pembayaran:")
+        val nominalpembayaran = readLine()!!.toInt()
+        val kembalian = nominalpembayaran - totalHarga
+
+        println("-------------------------------")
+        println("Nominal Pembayaran: Rp.$nominalpembayaran")
+        println("Kembalian: Rp.$kembalian")
+        println("-------------------------------")
+    }
+}
+
+fun main() {
+    val d_obat = apotek()
+    val kasir = pembelian(d_obat)
+
+    var ulang = true
+
+    while (ulang) {
+        println("\nPROGRAM KASIR APOTEK SEDERHANA")
+        println("Pilihan Menu:")
+        println("1. Kelola Daftar Obat")
+        println("2. Kasir")
+        println("Masukkan Pilihan Menu:")
+        val menu = readLine()!!.toInt()
+
+        when (menu) {
+            1 -> {
+                println("Kelola Daftar Obat")
+                d_obat.daftar_obat()
+                println("Apakah Anda ingin menambahkan obat baru? (Ya/Tidak)")
+                val jawaban = readLine()!!.toLowerCase()
+                if (jawaban == "ya") {
+                    println("Masukkan nama obat:")
+                    val nama1 = readLine()!!
+                    println("Masukkan harga obat:")
+                    val harga1 = readLine()!!.toInt()
+                    d_obat.tambahdata(nama1, harga1)
+                }
+            }
+            2 -> {
+                println("Kasir")
+                kasir.prosesTransaksi()
+            }
+            else -> println("Pilihan menu tidak valid")
+        }
+
+        println("\nApakah Anda ingin kembali ke menu utama? (Ya/Tidak)")
+        val ulang1 = readLine()!!.toLowerCase()
+        ulang = ulang1 == "ya"
+    }
+    println("Terima kasih telah menggunakan program ini!")
+}
