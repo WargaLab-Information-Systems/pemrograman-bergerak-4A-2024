@@ -1,0 +1,60 @@
+import java.util.Scanner
+
+class Sepatu(val kode: String, val nama: String, val harga: Int)
+
+class KeranjangBelanja {
+    val listSepatu = mutableListOf<Sepatu>()
+
+    fun tambahSepatu(sepatu: Sepatu) {
+        listSepatu.add(sepatu)
+    }
+
+    fun hitungTotalHarga(): Int {
+        var totalHarga = 0
+        for (sepatu in listSepatu) {
+            totalHarga += sepatu. harga
+        }
+        return totalHarga
+    }
+}
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+    val keranjang = KeranjangBelanja()
+
+    val sepatu1 = Sepatu("SPT01", "Nike Air Max", 500000)
+    val sepatu2 = Sepatu("SPT02", "Adidas Ultraboost", 600000)
+    val sepatu3 = Sepatu("SPT03", "Puma RS-X", 550000)
+
+    val daftarSepatu = listOf(sepatu1, sepatu2, sepatu3)
+
+    println("Daftar Sepatu:")
+    for (sepatu in daftarSepatu) {
+        println("${sepatu.kode} - ${sepatu.nama}: Rp ${sepatu.harga}")
+    }
+
+    var lanjutBelanja = true
+
+    while (lanjutBelanja) {
+        print("Masukkan kode sepatu yang ingin dibeli atau ketik 'SELESAI' untuk mengakhiri: ")
+        val inputKode = scanner.nextLine()
+
+        if (inputKode.equals("SELESAI", ignoreCase = true)) {
+            lanjutBelanja = false
+        } else {
+            val sepatuDitemukan = daftarSepatu.find { it.kode == inputKode }
+            if (sepatuDitemukan != null) {
+                keranjang.tambahSepatu(sepatuDitemukan)
+                println("${sepatuDitemukan.nama} ditambahkan ke keranjang belanja.")
+            } else {
+                println("Sepatu dengan kode $inputKode tidak ditemukan.")
+            }
+        }
+    }
+
+    println("\nRingkasan Belanja:")
+    for (sepatu in keranjang.listSepatu) {
+        println("${sepatu.nama}: Rp ${sepatu.harga}")
+    }
+    println("Total Harga: Rp ${keranjang.hitungTotalHarga()}")
+}
