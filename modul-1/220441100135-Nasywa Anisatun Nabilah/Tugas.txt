@@ -1,0 +1,68 @@
+class Barang(val jenis: String, val harga: Int)
+
+class TokoMahar(private val stok: Map<String, Int>) {
+    fun tampilkanBarang() {
+        println("Daftar Barang Tersedia:")
+        for ((jenis, harga) in stok) {
+            println("$jenis - Rp $harga")
+        }
+        println("Apakah Anda ingin memulai transaksi sekarang? (Ya/Tidak)")
+        val jawaban = readLine()
+        if (jawaban?.equals("Ya", ignoreCase = true) == true) {
+            transaksi()
+        }
+    }
+
+    fun transaksi() {
+        var totalHarga = 0
+        var selesai = false
+        while (!selesai) {
+            println("\nMasukkan jenis barang yang ingin dibeli, atau ketik 'selesai' untuk mengakhiri:")
+            val input = readLine()
+            if (input.equals("selesai", ignoreCase = true)) {
+                println("Terima kasih telah berbelanja di Toko Mahar!")
+                selesai = true
+            } else {
+                val hargaBarang = stok[input]
+                if (hargaBarang != null) {
+                    totalHarga += hargaBarang
+                    println("$input telah ditambahkan ke keranjang.")
+                } else {
+                    println("Barang tidak ditemukan.")
+                }
+            }
+        }
+
+
+    }
+}
+fun main() {
+    val stok = mapOf(
+        "Mahar Rustic" to 400000,
+        "Mahar Koin" to 500000,
+        "Mahar Transparan" to 550000,
+        "Mahar Bulat" to 600000
+    )
+    val toko = TokoMahar(stok)
+
+    println("\nSelamat datang di Toko Mahar!")
+    println("Silakan pilih opsi:")
+    println("1. Tampilkan daftar barang")
+    println("2. Keluar")
+    println("Masukkan pilihan anda: ")
+
+    var selesai = false
+
+    while (!selesai) {
+        val pilihan = readLine()?.toInt()
+
+        when (pilihan) {
+            1 -> toko.tampilkanBarang()
+            2 -> {
+                selesai = true
+                println("Terima kasih telah mengunjungi Toko Mahar!")
+            }
+            else -> println("Pilihan tidak valid. Silakan pilih opsi yang benar.")
+        }
+    }
+}
