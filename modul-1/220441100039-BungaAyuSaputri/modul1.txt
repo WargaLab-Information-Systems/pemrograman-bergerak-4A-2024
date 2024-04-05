@@ -1,0 +1,91 @@
+class TiketDufan(val kode: Int, val jenis: String, val harga: Int)
+
+class keranjangbeli {
+    val listTiket = mutableListOf<TiketDufan>()
+
+    fun tambahTiket(tiket: TiketDufan) {
+        listTiket.add(tiket)
+    }
+
+    fun hitungTotalHarga(): Int {
+        var totalHarga = 0
+        for (tiket in listTiket) {
+            totalHarga += tiket.harga
+        }
+        return totalHarga
+    }
+}
+
+fun main() {
+    val keranjang = keranjangbeli()
+
+    val tiketreguler = TiketDufan(1, "Tiket Reguler(Paket 1) ", 150000)
+    val tiketreguler2 = TiketDufan(2, "Tiket Reguler(Paket 2) ", 250000)
+    val tiketExpress = TiketDufan(3, "Tiket Express", 350000)
+    val tiketVIP = TiketDufan(4, "Tiket VIP", 400000)
+    val tiketVVIP = TiketDufan(5, "Tiket VVIP", 500000)
+
+    val daftarTiket = listOf(tiketreguler, tiketreguler2, tiketExpress, tiketVIP, tiketVVIP)
+
+    println("===========DAFTAR TIKET DUFAN===========")
+    println("========================================")
+    for (tiket in daftarTiket) {
+        println("${tiket.kode} - ${tiket.jenis}: Rp ${tiket.harga}")
+    }
+    println("========================================")
+
+
+    var lanjutBelanja = true
+
+    while (lanjutBelanja) {
+        print("Masukkan kode tiket yang ingin dibeli atau ketik '0' untuk mengakhiri: ")
+        val inputKode = readLine() ?: ""
+
+        if (inputKode.equals("0", ignoreCase = true)) {
+            lanjutBelanja = false
+        } else {
+            val kodeInt = inputKode?.toIntOrNull()
+            if (kodeInt in 1..5) {
+                val tiketDitemukan = daftarTiket.find { it.kode == kodeInt }
+                if (tiketDitemukan != null) {
+                    keranjang.tambahTiket(tiketDitemukan)
+                    println("${tiketDitemukan.jenis} ditambahkan ke keranjang beli.")
+                } else {
+                    println("Tiket dengan kode $inputKode tidak ditemukan.")
+                }
+            }
+        }
+
+        println("\n ===Struk Pembelian Tiket Dufan===")
+        println("====================================")
+        for (tiket in keranjang.listTiket) {
+            println("${tiket.jenis}: Rp ${tiket.harga}")
+        }
+        println("====================================")
+        println("Total Harga: Rp ${keranjang.hitungTotalHarga()}")
+        println("====================================")
+    }
+
+    print("Masukkan Nominal Pembayaran: ")
+    val pembayaran = readLine()?.toIntOrNull() ?: 0
+
+    if (pembayaran >= keranjang.hitungTotalHarga()) {
+        val totalHarga = keranjang.hitungTotalHarga()
+        println("Uang Cukup. Terima kasih!")
+        val kembalian = pembayaran - totalHarga
+        println("Kembalian Anda: Rp $kembalian")
+
+        println("\n ===NOTA PEMBELIAN TIKET DUFAN===")
+        println("====================================")
+        for (tiket in keranjang.listTiket) {
+            println("${tiket.jenis}: Rp ${tiket.harga}")
+        }
+        println("====================================")
+        println("Total Harga: Rp $totalHarga")
+        println("Pembayaran: Rp $pembayaran")
+        println("Kembalian: Rp $kembalian")
+        println("====================================")
+    } else {
+        println("Maaf uang anda kurang, silahkan lakukan transaksi kembali!")
+    }
+}

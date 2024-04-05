@@ -1,0 +1,52 @@
+class KasetFilm(val judul: String, val sutradara: String, val tahunRilis: Int) {
+    fun tampilkanInfo() {
+        val keterangan = if (tahunRilis < 2000) "Film Klasik" else "Film Modern"
+        println("$judul".padEnd(35) + "$sutradara".padEnd(20) + "$tahunRilis".padEnd(15) + "$keterangan")
+    }
+}
+
+fun main() {
+    val daftarKasetFilm = mutableListOf<KasetFilm>()
+//Mutable List adalah tipe data dalam pemrograman yang memungkinkan perubahan nilai elemen-elemennya setelah list tersebut dibuat.
+//Artinya dapat menambah, menghapus, atau mengubah nilai elemen di dalamnya tanpa perlu membuat list baru. 
+//Kegunaan dari MutableList adalah untuk menyimpan kumpulan data dalam bentuk list yang dapat diubah sesuai kebutuhan. 
+//Hal ini berguna ketika perlu menyimpan dan memanipulasi data dalam bentuk urutan yang dapat diubah.
+//Contoh penggunaannya
+    //fun main() {
+        // Membuat mutable list kosong
+        // val mutableList: MutableList<String> = mutableListOf()
+        // Menambahkan elemen ke dalam mutable list
+        // mutableList.add("Kerbau")
+        // mutableList.add("Sapi")
+        // mutableList.add("Kambing")
+        // Menampilkan isi dari mutable list
+        // println("Isi dari mutable list: $mutableList")
+        // Mengubah elemen pada indeks tertentu
+        // mutableList[1] = "Ayam"
+        // println("Setelah diubah: $mutableList")
+        // Menghapus elemen pada indeks tertentu
+        // mutableList.removeAt(0)
+        // println("Setelah dihapus: $mutableList")
+        // Menambahkan elemen pada indeks tertentu
+        // mutableList.add(1, "Domba")
+        //println("Setelah ditambahkan: $mutableList")
+    //}
+
+    daftarKasetFilm.add(KasetFilm("Inception", "Christopher Nolan", 2010))
+    daftarKasetFilm.add(KasetFilm("Hokus Pokus", "Kenny Ortega", 1993))
+    daftarKasetFilm.add(KasetFilm("The Dark Knight", "Christopher Nolan", 2008))
+    daftarKasetFilm.add(KasetFilm("Matilda", "Danny DeVito", 1996))
+
+
+    println("===================================================================================")
+    println("                 		 Daftar Kaset Film                    ")
+    println("===================================================================================")
+    println("Judul".padEnd(35) + "Sutradara".padEnd(20) + "Tahun Rilis".padEnd(15) + "Keterangan")
+    println("-----------------------------------------------------------------------------------")
+    
+    for (kasetFilm in daftarKasetFilm) {
+        kasetFilm.tampilkanInfo()
+    }
+
+    println("===================================================================================")
+}

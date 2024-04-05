@@ -1,0 +1,51 @@
+class Menu(val name: String, var price: Int)
+
+class CoffeeShop {
+    val menuList = listOf(
+        Menu("Mocachino", 16000),
+        Menu("Capuccino", 19000),
+        Menu("Kopi Susu Gula Aren", 20000),
+        Menu("Thai Tea", 15000),
+        Menu("Coffee Latte", 15000)
+    )
+    fun displayMenu() {
+        println("Menu:")
+        menuList.forEachIndexed { index, menu ->
+            println("${index + 1}. ${menu.name} Rp${menu.price}")
+        }
+    }
+    fun payment(totalPrice: Int): Triple<Int, Double, Double> {
+        var totalPaid = 0.0
+        while (totalPaid < totalPrice) {
+            println("Silahkan masukkan jumlah uang pembayaran:")
+            val bayar = readLine()!!.toDouble()
+            totalPaid += bayar
+
+            if (totalPaid < totalPrice) {
+                println("Pembayaran belum mencukupi. Total yang belum dibayar: ${totalPrice - totalPaid}")
+            }
+        }
+
+        val change = totalPaid - totalPrice
+        return Triple(totalPrice, totalPaid, change)
+    }
+}
+fun main() {
+    val coffeeShop = CoffeeShop()
+    coffeeShop.displayMenu()
+    println("Mau Pesan kopi apa? (1/2/3/4/5)")
+    val choice = readLine()!!.toInt()
+    if (choice in 1..coffeeShop.menuList.size) {
+        val chosenMenu = coffeeShop.menuList[choice - 1]
+        println("Anda Memilih ${chosenMenu.name}")
+        println("Harga: Rp${chosenMenu.price}")
+        val totalPrice = chosenMenu.price
+        val (harga, jumlahPembayaran, kembalian) = coffeeShop.payment(totalPrice)
+        println("Total Harga: Rp$harga")
+        println("Jumlah Pembayaran: Rp$jumlahPembayaran")
+        println("Kembalian: Rp$kembalian")
+        println("Terima kasih telah berkunjung!")
+    } else {
+        println("Menu tidak tersedia.")
+    }
+}
