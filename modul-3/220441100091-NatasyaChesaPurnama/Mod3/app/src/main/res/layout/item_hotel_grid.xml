@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="135dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:background="#FCFCFC">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/pict_hotel"
+            android:layout_width="119dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="8dp"
+            app:shapeAppearanceOverlay="@style/circular"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/nama_hotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Nama Hotel"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textColor="#424040"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/pict_hotel"
+            app:layout_constraintStart_toStartOf="@+id/pict_hotel"
+            app:layout_constraintTop_toBottomOf="@+id/pict_hotel" />
+
+        <TextView
+            android:drawableStart="@drawable/tamu"
+            android:id="@+id/pengunjung"
+            android:layout_width="43dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corner_wisata"
+            android:fontFamily="@font/quicksand_semibold"
+            android:paddingStart="4dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="4dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:circularflow_radiusInDP="10dp"
+            app:layout_constraintStart_toStartOf="@id/nama_hotel"
+            app:layout_constraintTop_toBottomOf="@id/nama_hotel" />
+
+        <TextView
+            android:drawableStart="@drawable/star"
+            android:id="@+id/rating"
+            android:layout_width="43dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/corner_wisata"
+            android:fontFamily="@font/quicksand_semibold"
+            android:paddingStart="4dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="4dp"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            app:circularflow_radiusInDP="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/nama_hotel"
+            app:layout_constraintTop_toBottomOf="@id/nama_hotel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
