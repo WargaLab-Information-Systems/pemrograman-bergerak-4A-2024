@@ -7,38 +7,41 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.implementasimodul3.R
+import com.example.implementasimodul3.datamodel.HotelModel
 import com.example.implementasimodul3.datamodel.PlaceModel
 
-class HorizontalAdapter(
+class VerticalGridAdapter(
 
-    private val listPlace: List<PlaceModel>,
+    private val listHotel: List<HotelModel>,
     private val listener: OnAdapterListener
 
-): RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
+): RecyclerView.Adapter<VerticalGridAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.rv_item_horizontal, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.rv_item_grid_vertikal, parent, false)
         )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val place =  listPlace[position]
-        holder.textName.text = place.name
-        holder.textLocation.text = place.location
-        holder.image.setImageResource(place.image)
+        val hotel =  listHotel[position]
+        holder.textTitle.text = hotel.name
+        holder.textVisitor.text = hotel.visitor.toString()
+        holder.textRating.text = hotel.rating.toString()
+        holder.image.setImageResource(hotel.image)
         holder.itemView.setOnClickListener {
-            listener.onClick(place)
+            listener.onClick(hotel)
         }
     }
 
-    override fun getItemCount() = listPlace.size
+    override fun getItemCount() = listHotel.size
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val textName = view.findViewById<TextView>(R.id.place_name)
-        val textLocation = view.findViewById<TextView>(R.id.place_location)
-        val image = view.findViewById<ImageView>(R.id.place_image)
+        val textTitle= view.findViewById<TextView>(R.id.hotel_title)
+        val textVisitor = view.findViewById<TextView>(R.id.visitor)
+        val textRating = view.findViewById<TextView>(R.id.rate)
+        val image = view.findViewById<ImageView>(R.id.hotel_image)
     }
 
     interface OnAdapterListener {
-        fun onClick(place: PlaceModel)
+        fun onClick(hotel: HotelModel)
     }
 }

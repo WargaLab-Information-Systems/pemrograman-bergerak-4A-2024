@@ -1,4 +1,4 @@
-package com.example.implementasimodul3
+package com.example.implementasimodul3.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.implementasimodul3.R
 import com.example.implementasimodul3.datamodel.PlaceModel
 
 class HorizontalAdapter(
@@ -14,13 +15,13 @@ class HorizontalAdapter(
     private val listener: OnAdapterListener
 
 ): RecyclerView.Adapter<HorizontalAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HorizontalAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.rv_item_horizontal, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: HorizontalAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val place =  listPlace[position]
         holder.textName.text = place.name
         holder.textLocation.text = place.location

@@ -1,4 +1,4 @@
-package com.example.implementasimodul3
+package com.example.implementasimodul3.datamodel
 
 data class PlaceModel(
     val name: String,
