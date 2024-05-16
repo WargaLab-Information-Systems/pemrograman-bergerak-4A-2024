@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="132dp"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HomePage">
+
+        <TextView
+            android:id="@+id/seeall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:lineHeight="15sp"
+            android:text="See All"
+            android:textColor="#9F9F9F"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@id/hotplaces" />
+
+        <TextView
+            android:id="@+id/uname"
+            android:drawableRight="@drawable/hand"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi,Rina"
+            android:layout_marginTop="66dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textSize="20sp"
+            android:lineHeight="15dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/quicksand"
+            android:textColor="#ACACAC"
+            android:text="Let’s Discover"
+            app:layout_constraintStart_toStartOf="@id/uname"
+            app:layout_constraintTop_toBottomOf="@id/uname"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:shapeAppearanceOverlay="@style/circle"
+            android:padding="5dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#42E834"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/uname"
+            app:srcCompat="@drawable/person"/>
+
+        <TextView
+            android:id="@+id/hotplaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:lineHeight="15sp"
+            android:text="Hot Places"
+            android:layout_marginTop="31dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ld"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/wisata"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/hotplaces"
+            app:layout_constraintTop_toBottomOf="@+id/hotplaces"
+            tools:listitem="@layout/item_horizontal"
+            tools:orientation="horizontal"/>
+
+        <TextView
+            android:id="@+id/besthotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_marginTop="26dp"
+            android:lineHeight="15sp"
+            android:text="Best Hotels"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/hotplaces"
+            app:layout_constraintTop_toBottomOf="@id/wisata"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hotel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/besthotel"
+            app:layout_constraintTop_toBottomOf="@+id/besthotel"
+            app:spanCount="2"
+            tools:listitem="@layout/item_grid"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
