@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".DetailActivityWisata">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Judul halaman -->
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hotel_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"
+            android:text="Ubud's Hotel"
+            android:fontFamily="@font/quicksand_bold"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/share_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="@+id/hotel_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/hotel_title" />
+
+
+        <!-- Gambar hotel -->
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/hotel_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:paddingStart="30dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_title"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            app:srcCompat="@drawable/foto1" />
+
+
+        <!--         Deskripsi hotel -->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hotel_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="start"
+            android:justificationMode="inter_word"
+            android:text="In conjunction with the reopening of international flights at both Soekarno Hatta International Airport, Jakarta, and Sam Ratulangi Airport, Manado, it won’t be long ‘til Bali reopens its international borders to welcome foreign travellers back to the island of the Gods with the target of opening by 14 October 2021. Meanwhile, domestic tourists are already able to travel to Bali with predetermined conditions. Hence, Ini Vie Hospitality is encouraging travellers to start planning their island retreats at one of their exquisite properties."
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hotel_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
