@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.modul4.app-mergeDebugResources-37:/values-sv-rSE/values-sv-rSE.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\MCPC\\.gradle\\caches\\transforms-3\\f47d151bdc38b0b1de629df9f970410a\\transformed\\android-image-picker-3.1.0\\res\\values-sv-rSE\\values-sv-rSE.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,100,141,227,296,369,439,508,570,691,728,846,895,962,1011",
+                        "endColumns": "44,40,85,68,72,69,68,61,120,36,117,48,66,48,76",
+                        "endOffsets": "95,136,222,291,364,434,503,565,686,723,841,890,957,1006,1083"
+                    }
+                }
+            ]
+        }
+    ]
+}
