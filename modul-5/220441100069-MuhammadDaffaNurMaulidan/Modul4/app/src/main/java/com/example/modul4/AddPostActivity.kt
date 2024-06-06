@@ -91,7 +91,7 @@ class AddPostActivity : AppCompatActivity() {
             }
         }
     }
-
+    // validasi inputan user
     private fun validateInput(): Boolean {
         var error = 0
         // Fungsi validateInput digunakan untuk memvalidasi input dari pengguna.
