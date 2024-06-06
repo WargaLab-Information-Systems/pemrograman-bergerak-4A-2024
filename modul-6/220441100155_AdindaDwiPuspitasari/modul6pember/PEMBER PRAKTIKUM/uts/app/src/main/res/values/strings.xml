@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">uts</string>
+    <string name="undangan_pernikahan">UNDANGAN \nPERNIKAHAN</string>
+    <string name="nm"><![CDATA[KASTONO\n&\nKUNITI]]></string>
+    <string name="k"><![CDATA[K\n&\nK]]></string>
+    <string name="nama"><![CDATA[KASTONO\n&\nKUNITI]]></string>
+    <string name="st">MAR   | 15   | 2000</string>
+    <string name="alm">Dsn.Tretes Ds.Pragelan\n
+        Kec.Gondang Kab.Bojonegoro</string>
+    <string name="assalamu_alaikum_wr_wb"><![CDATA[Assalamu\'alaikum wr.wb\nMaha Suci Allah yang telah menciptakan makhluknya berpasang pasangan. Dengan ini kami mengundang Bapak/Ibu/Saudara/i pada acara pernikahan kami.]]></string>
+    <string name="kuniti">KUNITI</string>
+    <string name="putri">Putri dari Bapak Tarmuji dan Alm.Ibu Paini</string>
+    <string name="yang">Yang Insya Allah akan dilaksanakan pada :</string>
+    <string name="dsn_tretes_ds_pragelan_kec_gondang_kab_bojonegoro">Dsn.Tretes Ds.Pragelan Kec.Gondang Kab.Bojonegoro</string>
+    <string name="str">\t"Ya Allah, dengan limpahan rahmat dan kasih sayang-Mu yang tiada terhingga, kami memohon agar Engkau memberkahi pernikahan orang tua kami. Ampunilah dosa-dosa mereka, kuatkanlah ikatan cinta dan kasih sayang di antara mereka, dan berikanlah mereka kebahagiaan yang berlimpah dalam hidup bersama.\n\tYa Allah, peliharalah hubungan suci ini dari segala godaan dan cobaan yang mungkin datang. Jadikanlah rumah tangga mereka sebagai tempat kedamaian, kasih sayang, dan pengampunan. Semoga setiap langkah yang mereka ambil selalu mendapat ridha dan petunjuk dari-Mu.\n\tYa Allah, berikanlah mereka kesehatan yang baik agar mereka dapat saling mendukung dan menguatkan satu sama lain dalam segala hal. Bimbinglah mereka untuk selalu mengutamakan kebaikan dan kebenaran dalam setiap tindakan dan perkataan mereka.\n\tYa Allah, karuniakanlah kepada mereka umur yang panjang dan kebahagiaan yang tak terhingga di dunia dan di akhirat. Jadikanlah pernikahan mereka sebagai teladan bagi keluarga kami dan orang-orang di sekitar kami.\n\tYa Allah, terimalah doa kami ini dengan penuh kerendahan hati. Engkaulah Maha Mendengar, Maha Penyayang. Amiin.\"</string>
+    <string name="string">Merupakan suatu kehormatan dan kebahagiaan bagi kami apanila\nBapak/Ibu/Saudara/i berkenan hadir untuk memberikan\ndoa restu kepada kedua mempelai.</string>
+    <string name="br">Merupakan suatu kehormatan dan kebahagiaan bagi kami apanila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.</string>
+    <string name="ytw"><![CDATA[Yang Berbahagia Keluarga :\nKUNITI & KASTONO]]></string>
+
+</resources>
