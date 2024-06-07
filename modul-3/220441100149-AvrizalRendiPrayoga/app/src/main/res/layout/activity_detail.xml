@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/judul_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="Hotel Tugu Malang"
+        android:textColor="#434343"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_share"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/share_btn_theme"
+        android:src="@drawable/share"
+        app:layout_constraintBottom_toBottomOf="@+id/judul_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/judul_detail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="27dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judul_detail">
+
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotel_tugu" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/detail_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:fontFamily="@font/poppins"
+        android:justificationMode="inter_word"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec turpis nec enim gravida sagittis. Etiam pellentesque tincidunt mauris, vel sollicitudin nisi euismod volutpat. Phasellus hendrerit sit amet quam quis convallis. Suspendisse euismod vel justo eget aliquet. Donec vel tortor sem. Curabitur mattis mauris tellus, at placerat lectus laoreet eu. Pellentesque urna felis, varius non urna in, volutpat scelerisque massa. Quisque ut tincidunt tellus. Proin viverra dictum nulla, sit amet tristique orci. Nullam lobortis mollis rhoncus. Aenean ac arcu fringilla, congue lacus in, scelerisque felis. Mauris ac risus metus. Morbi nisl sem, blandit non felis ac, commodo iaculis augue. Duis venenatis in sapien at iaculis."
+        android:textColor="#3C3C3C"
+        android:textSize="12sp"
+        android:layout_marginHorizontal="23dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
