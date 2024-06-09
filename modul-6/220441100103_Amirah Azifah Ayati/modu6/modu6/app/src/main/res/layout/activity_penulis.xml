@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Penulis">
+
+    <ImageView
+        android:onClick="balik"
+        android:id="@+id/bBack"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/abc"
+        android:layout_marginStart="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Creator"
+        android:fontFamily="@font/plusjakartasans_xtrabold"
+        android:textSize="15sp"
+        android:textColor="#434343"
+        app:layout_constraintStart_toEndOf="@id/bBack"
+        app:layout_constraintTop_toTopOf="@id/bBack"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:shapeAppearanceOverlay="@style/circle"
+        android:padding="5dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#2E53E7"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@id/abc"
+        app:layout_constraintStart_toStartOf="@id/abc"
+        app:layout_constraintTop_toBottomOf="@id/abc"
+        android:src="@drawable/monyet"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ms Opet"
+        android:fontFamily="@font/urbanistextrabold"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        android:layout_marginTop="12dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:id="@+id/namani"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/author"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="31dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/nm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ms Opet"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/namani"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/ageni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/nm"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/ageni"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/statusni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/age"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="College Student"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/statusni"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/aboutni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/plusjakartasans"
+        android:justificationMode="inter_word"
+        android:lineHeight="15sp"
+        android:text="Kau tinggal sini kah"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        app:layout_constraintTop_toBottomOf="@id/aboutni" />
+
+    <TextView
+        android:id="@+id/faceni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Face"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/about"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Funniest"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/faceni"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/ipkni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPK"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/face"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/ipk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3,9"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/ipkni"
+        app:layout_constraintStart_toStartOf="@id/bBack"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
