@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/pict_wisata"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tamannasionalkomodo" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/nama_tempat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:textColor="#424040"
+            android:text="Taman Nasional Komodo"
+            android:lineHeight="15sp"
+            android:textSize="12sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:drawableStart="@drawable/tempat"
+            android:drawablePadding="5dp"
+            android:id="@+id/lokasi"
+            android:layout_width="0dp"
+            app:layout_goneMarginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Labuan Bajo"
+            android:textColor="#424040"
+            android:fontFamily="@font/quicksand_medium"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="@+id/nama_tempat"
+            app:layout_constraintStart_toStartOf="@+id/nama_tempat"
+            app:layout_constraintTop_toBottomOf="@+id/nama_tempat" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
