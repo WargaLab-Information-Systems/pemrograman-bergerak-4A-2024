@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context=".Utama">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/uname"
+            android:drawableRight="@drawable/halo"
+            android:drawablePadding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, Flo"
+            android:layout_marginTop="22dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/quicksandsemibold"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:lineHeight="15dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/quicksand"
+            android:text="Let’s Discover your favorite player"
+            android:textColor="#ACACAC"
+            app:layout_constraintStart_toStartOf="@id/uname"
+            app:layout_constraintTop_toBottomOf="@id/uname" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView"
+            android:onClick="author"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:shapeAppearanceOverlay="@style/circle"
+            android:padding="5dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#42E834"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/uname"
+            android:src="@drawable/cewe"/>
+
+        <TextView
+            android:id="@+id/FP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Football Player"
+            android:fontFamily="@font/plusjakartasans_bold"
+            android:textColor="#434343"
+            android:textSize="18sp"
+            android:lineHeight="15dp"
+            app:layout_constraintTop_toBottomOf="@id/ld"
+            app:layout_constraintStart_toStartOf="@id/ld"
+            android:layout_marginTop="28dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pemain"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/ld"
+            app:layout_constraintTop_toBottomOf="@id/FP"
+            android:layout_marginTop="22dp"
+            tools:listitem="@layout/item_pemain" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

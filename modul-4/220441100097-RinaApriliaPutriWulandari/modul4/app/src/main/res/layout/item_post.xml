@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="2dp"
+    android:layout_marginBottom="25dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/person"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/na"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignTop="@id/person"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="127dp"
+            android:layout_toEndOf="@+id/person"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Rina Aprilia"
+                android:textColor="#3C3C3C"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="\@rinaaprilia"
+                android:textColor="#9D9C9C"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/person"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_kebab_menu" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14sp"
+            android:layout_alignStart="@id/person"
+            android:layout_below="@id/person"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:id="@+id/caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/person"
+            android:layout_below="@id/judul"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="18sp"
+            android:text="Beach cleaning activities in the eastern harbor area in order to maintain natural stability. #recycle #ecofriendly #newnormal #2024gantisepatu"
+            android:textColor="#3C3C3C" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/caption"
+            android:layout_below="@+id/caption"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="10 menit yang lalu"
+            android:textColor="#9D9C9C"
+            android:textSize="10sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="322dp"
+            android:layout_height="201dp"
+            android:layout_below="@+id/time"
+            android:layout_alignStart="@id/time"
+            android:layout_alignEnd="@id/menu"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:cardCornerRadius="10dp"
+            app:shapeAppearanceOverlay="@style/circular" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_like"
+                    android:layout_marginStart="12dp"
+                    />
+
+                <TextView
+                    android:id="@+id/like2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="0"
+                    android:layout_marginStart="5dp"
+                    app:layout_constraintStart_toEndOf="@id/like"
+                    android:textColor="#434142"
+                    android:textSize="10sp" />
+
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_comment"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="5dp"
+                    android:padding="2dp"
+                    android:text="0"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="#434142"
+                    app:layout_constraintTop_toTopOf="@id/like2"
+                    app:layout_constraintStart_toEndOf="@id/like2"
+                    />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/bookmark"
+                android:src="@drawable/ic_share" />
+
+            <ImageView
+                android:id="@+id/bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/ic_bookmark"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
