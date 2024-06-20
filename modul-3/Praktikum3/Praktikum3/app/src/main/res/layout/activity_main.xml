@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/greeting_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="22dp"
+                    android:text="Halo, Kevin "
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="23sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/greeting_subtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Mari jelajahi aplikasi ini!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/poppins"
+                    >
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/my_image_logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/gambar5">
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rv_horizontal_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="Hot Place"
+                android:fontFamily="@font/poppins_semibold"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="See All"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/poppins"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textColor="#535353"
+                android:onClick="seeall1"
+                android:layout_marginLeft="140dp"
+            ></com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_player_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/layout_linier_horizontal"
+            tools:orientation="horizontal" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/rv_grid_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="20dp"
+                android:text="Best Hotel"
+                android:fontFamily="@font/poppins_semibold"
+                >
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_button12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="See All"
+                android:backgroundTint="#FFFFFF"
+                android:fontFamily="@font/poppins"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="16sp"
+                android:textColor="#535353"
+                android:layout_marginLeft="140dp"
+                android:onClick="seeall2"
+                ></com.google.android.material.button.MaterialButton>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_player"
+            android:layout_width="wrap_content"
+            android:layout_height="430dp"
+            android:layout_marginLeft="18dp"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/item_grid" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
