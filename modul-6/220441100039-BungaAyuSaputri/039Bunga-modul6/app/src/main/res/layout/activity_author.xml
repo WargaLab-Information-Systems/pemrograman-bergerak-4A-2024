@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Profil">
+
+    <ImageView
+        android:onClick="balik"
+        android:id="@+id/bkembali"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/authorr"
+        android:layout_marginStart="84dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About Creator"
+        android:fontFamily="@font/plusjakartasans_xtrabold"
+        android:textSize="15sp"
+        android:textColor="#434343"
+        app:layout_constraintStart_toEndOf="@id/bkembali"
+        app:layout_constraintTop_toTopOf="@id/bkembali"
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:shapeAppearanceOverlay="@style/circle"
+        android:padding="5dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#2E53E7"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@id/authorr"
+        app:layout_constraintStart_toStartOf="@id/authorr"
+        app:layout_constraintTop_toBottomOf="@id/authorr"
+        android:src="@drawable/aku"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bunga Ayu Saputri"
+        android:fontFamily="@font/urbanistextrabold"
+        android:textSize="16dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        android:layout_marginTop="12dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/author"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="31dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/namaauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bunga Ayu Saputri"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/nama"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/umur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/namaauthor"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/umur"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/age"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/statusauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student College"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/status"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/statusauthor"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/aboutauthor"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/plusjakartasans"
+        android:justificationMode="inter_word"
+        android:lineHeight="15sp"
+        android:text="My standards are high, just like my heels"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        app:layout_constraintTop_toBottomOf="@id/about" />
+
+    <TextView
+        android:id="@+id/face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Face"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/aboutauthor"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/faceauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Beautiful"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/face"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/ipk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IPK"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans_semibold"
+        app:layout_constraintTop_toBottomOf="@id/faceauthor"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="20dp"
+        android:lineHeight="15sp"/>
+
+    <TextView
+        android:id="@+id/ipkauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bismillah 3,99"
+        android:textColor="#434343"
+        android:textSize="12dp"
+        android:fontFamily="@font/plusjakartasans"
+        app:layout_constraintTop_toBottomOf="@id/ipk"
+        app:layout_constraintStart_toStartOf="@id/bkembali"
+        android:layout_marginTop="6dp"
+        android:lineHeight="15sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
